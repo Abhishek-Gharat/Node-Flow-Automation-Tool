@@ -5,7 +5,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import DataObjectIcon from "@mui/icons-material/DataObject";
 import { saveCanvas, toJSON } from "../../helpers";
@@ -52,12 +51,14 @@ const Layout = ({
     setNodes([]);
     handleClrClose();
   };
+
   const AnimatedIcon = styled(AccountTreeIcon)(({ theme }) => ({
     transition: 'transform 0.3s ease-in-out',
     '&:hover': {
       transform: 'translate(5px, -5px)',
     },
   }));
+
   const open = Boolean(anchorEl);
   const openToClear = Boolean(anchorClrEl);
   const id = open ? "simple-popover" : undefined;
@@ -85,24 +86,23 @@ const Layout = ({
         <Box p="40px">
           <h1>Are you sure you want to clear the canvas?</h1>
           <Box mt="20px">
-  <Button
-    variant="outlined"
-    onClick={handleRemoveAllNodes}
-    color="error"
-    style={{ marginRight: "10px" }}
-  >
-    Yes
-  </Button>
-  
-  <Button
-    variant="outlined"
-    onClick={handleClrClose}
-    color="error"
-    style={{ marginRight: "10px" }}
-  >
-    No
-  </Button>
+            <Button
+              variant="outlined"
+              onClick={handleRemoveAllNodes}
+              color="error"
+              style={{ marginRight: "10px" }}
+            >
+              Yes
+            </Button>
 
+            <Button
+              variant="outlined"
+              onClick={handleClrClose}
+              color="error"
+              style={{ marginRight: "10px" }}
+            >
+              No
+            </Button>
           </Box>
         </Box>
       </Mpopover>
@@ -124,21 +124,21 @@ const Layout = ({
           >
             <AnimatedIcon />
           </IconButton>
-          <Typography 
-  variant="h6" 
-  component="div" 
-  sx={{ 
-    flexGrow: 1, 
-    color: "#333", // Dark gray color
-    fontWeight: 'bold',
-    fontFamily: 'Brush Script MT',
-    fontSize: '2rem',
-    textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-    // Add any other styles you prefer
-  }}
->
-  Node Flow Automation
-</Typography>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              flexGrow: 1,
+              color: "#333", // Dark gray color
+              fontWeight: 'bold',
+              fontFamily: 'Brush Script MT',
+              fontSize: '2rem',
+              textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+              // Add any other styles you prefer
+            }}
+          >
+            Node Flow Automation
+          </Typography>
           <Box mr="8px">
             <Tooltip
               title={`Download as an Image/png`}
