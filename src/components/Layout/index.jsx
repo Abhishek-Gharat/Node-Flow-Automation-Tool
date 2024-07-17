@@ -85,17 +85,24 @@ const Layout = ({
         <Box p="40px">
           <h1>Are you sure you want to clear the canvas?</h1>
           <Box mt="20px">
-            <Button
-              variant="outlined"
-              onClick={handleRemoveAllNodes}
-              color="error"
-              style={{ marginRight: "10px" }}
-            >
-              Yes
-            </Button>
-            <Button variant="outlined" onClick={handleClrClose} color="primary">
-              No
-            </Button>
+  <Button
+    variant="outlined"
+    onClick={handleRemoveAllNodes}
+    color="error"
+    style={{ marginRight: "10px" }}
+  >
+    Yes
+  </Button>
+  
+  <Button
+    variant="outlined"
+    onClick={handleClrClose}
+    color="error"
+    style={{ marginRight: "10px" }}
+  >
+    No
+  </Button>
+
           </Box>
         </Box>
       </Mpopover>
@@ -117,8 +124,20 @@ const Layout = ({
           >
             <AnimatedIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "black", fontWeight: 'bold' }}>
-  Node Flow Diagram
+          <Typography 
+  variant="h6" 
+  component="div" 
+  sx={{ 
+    flexGrow: 1, 
+    color: "#333", // Dark gray color
+    fontWeight: 'bold',
+    fontFamily: 'Brush Script MT',
+    fontSize: '2rem',
+    textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+    // Add any other styles you prefer
+  }}
+>
+  Node Flow Automation
 </Typography>
           <Box mr="8px">
             <Tooltip
